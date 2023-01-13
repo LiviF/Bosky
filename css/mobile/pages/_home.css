@@ -1,0 +1,46 @@
+.swiper {
+  width: 100%;
+  height: 30rem;
+}
+.swiper-img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+}
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
+.landing__logo {
+  max-width: 15rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.landing__subcategory-home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.landing-img {
+  width: 20rem;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.landing__paragraph {
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=_home.css.map */

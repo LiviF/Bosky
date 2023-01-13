@@ -1,0 +1,88 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+  z-index: 100;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header--background {
+  background: white;
+}
+.header__logo {
+  width: 10rem;
+}
+.header__open, .header__close {
+  display: none;
+}
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .nav__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1.5rem;
+}
+.header .nav__link {
+  font-size: 1.5rem;
+}
+.header .nav__container-button {
+  display: none;
+}
+.header .nav__container-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .nav__link {
+  position: relative;
+}
+.header .nav__link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: #F2A663;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: scaleY(0.1);
+          transform: scaleY(0.1);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.header .nav__link:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #F2A663;
+}
+.header .nav__nombre-contenedor, .header .nav__puesto-contenedor, .header .nav__localizacion-contenedor {
+  display: none;
+}
+/*# sourceMappingURL=_header.css.map */

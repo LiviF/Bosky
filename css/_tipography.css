@@ -1,0 +1,77 @@
+@font-face {
+  src: url("../tipography/commissioner-regular.woff2") format("woff2");
+  font-family: Commissioner, sans-serif;
+}
+@font-face {
+  src: url("../tipography/manrope-regular.woff2") format("woff2");
+  font-family: Manrope, sans-serif;
+}
+@font-face {
+  src: url("../tipography/permanentmarker-regular.woff2") format("woff2");
+  font-family: "Permanent Marker", cursive;
+}
+h1 {
+  font-family: "Permanent Marker", cursive;
+  color: #F2A663;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
+}
+
+h2 {
+  font-family: Manrope, sans-serif;
+  color: #8C4A32;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 2rem;
+}
+
+h3 {
+  font-family: Commissioner, sans-serif;
+  color: #36593E;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+h4 {
+  font-family: Commissioner, sans-serif;
+  color: #F2A663;
+  padding: 0 2rem;
+}
+
+p {
+  font-family: Commissioner, sans-serif;
+  color: #000;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0 2rem;
+}
+
+ul, li {
+  font-family: Commissioner, sans-serif;
+  color: #000;
+  list-style: none;
+  text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+a {
+  font-family: Commissioner, sans-serif;
+  text-transform: none;
+  text-decoration: none;
+  color: #F2A663;
+}
+
+span {
+  font-family: Commissioner, sans-serif;
+  font-weight: bold;
+  color: #000;
+}
+/*# sourceMappingURL=_tipography.css.map */
