@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <title>Bosky</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png">
+        <meta name="theme-color" content="#3c790a">
+        <meta name="theme-color"
+              content="#ecd96f"
+              media="(prefers-color-scheme: light)">
+        <meta name="theme-color"
+              content="#0b3e05"
+              media="(prefers-color-scheme: dark)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="author" content="Livi Florea">
+        <meta name="generator" content="Clojure">
+        <meta name="keywords" content="html, css, javascript">
+        <meta name="description" content="Bosky website">
+        <meta property="og:image" content="img/screenshot.png">
+        <meta property="og:title" content="Bosky">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cuenta">
+        <meta name="twitter:creator" content="@cuenta">
+        <meta property="og:image:secure_url" content="https://...">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="300">
+        <meta property="og:image:alt" content="">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+    <header
+            class="header"
+            x-data=" { open: false, isTopScroll: true}"
+            @scroll.window="isTopScroll = window.pageYOffset === 0"
+            :class="isTopScroll ? '' : 'header--background'"
+    >
+        <div class="container">
+            <a class="header__logo" href="index.html">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </a>
+            <button class="button header__open" @click="open = true">
+                <img src="img/menu.png" alt="Open menu">
+            </button>
+            <nav class="nav" :class="open ? 'nav--show' : ''">
+                <div class="nav__container-button">
+                    <button class="button header__close" @click="open = false">
+                        <img src="img/close.png" alt="Close menu">
+                    </button>
+                </div>
+                <div class="nav__container-links">
+                    <ul class="nav__ul">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="equipo.html" class="nav__link">Equipo</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="escalada.html" class="nav__link">Escalada</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="aventura.html" class="nav__link">Aventura</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="naturaleza.html" class="nav__link">Naturaleza</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="blog.html" class="nav__link">Blog</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contacta.html" class="nav__link">Contacta</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Slider main container -->
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/naturaleza-top.webp" alt="Boulder">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/naturaleza_sedenterismo.webp" alt="Naturaleza">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hooks.webp" alt="Hooks">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <!-- the main begins -->
+        <div class="container">
+            <h1 class="landing__headline">Bosky Naturaleza</h1>
+        </div>
+        <section>
+            <p>Ser eco-conscientes y amigables con el medio ambiente es uno de nuestros pilares y es nuestro ethos que la naturaleza merece un mayor respeto de nosotros como humanos y es nuestro deber protegerla y aprender a observarla sin dañar su equilibrio natural. Nuestros programas de naturaleza, como salidas ornitológicas, botánicas y geológicas, lo llevan a la naturaleza para observar la belleza de la naturaleza. Observamos aves en sus hábitats con sus crías, según la estación observamos las que migran, descubrimos anfibios en arroyos que juegan un papel ecológico vital y son un indicador de la contaminación del agua, o deducimos las edades del ciclo de los árboles en el bosque.</p>
+        </section>
+            <img class="icon__separator" src="icons/naturaleza-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>Observación de la naturaleza</h2>
+            <article class="container__split">
+                <img class="page__image" src="img/naturaleza_birds.webp" alt="Birds trip">
+                <div class="container__split-naturaleza">
+                    <p>Nuestras expediciones nos llevan a diferentes hábitats sorprendentes, donde observamos la vida silvestre de las aves: anidando, viviendo, cuidando a sus crías o cazando. Recomendamos la primavera como la mejor estación para realizar un tour de ornitología por la época de reproducción y anidación. Las expediciones de avistamiento de aves nos conducen a grandes áreas boscosas, o pequeños ecosistemas, riberas de ríos y deltas, creando una experiencia de vida inolvidable.</p>
+                    <h3>Tarifas:</h3>
+                    <p>Día de observación de aves (6-8h / 3 personas): <span>199 €/group</span></p>
+                    <p>Día de observación de aves (6-8h / 4 - 10 personas): <span>55€/pers</span></p>
+                    <p>Avistamiento a medida de una especie concreta, misiones de ornitología para expertos, precios para grupos. Envíenos un correo electrónico a <span>naturaleza@bosky.com </span>y nos pondremos en contacto con usted lo antes posible.</p>
+                </div>
+            </article>
+        </section>
+        <img class="icon__separator" src="icons/naturaleza-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>Senderismo & rutas culturales y gastronómicas</h2>
+            <article class="container__split">
+                <img class="page__image" src="img/naturaleza_cultural.webp" alt="Cultural Bosky">
+                <div class="container__split-naturaleza">
+                    <p>Nuestras montañas suelen conservar antiguos castillos, pequeños pueblos construidos sobre rocas, antiguos monasterios o conventos, así como visitar yacimientos arqueológicos conservados y observar la antigua forma de vida. Podemos llevarte a un viaje cultural de descubrimiento para ver lo viejo y lo nuevo, con visitas a granjas de apicultores, pequeñas queserías familiares, granjas de animales, etc. Para los aficionados también ofrecemos rutas del vino y catas en bodegas, viendo cómo se procesa el aceite de oliva en las almazaras, participando en expediciones culinarias y recreando antiguas recetas junto a cocineros en pequeños pueblos de montaña. En pocas palabras, ¡una expedición para naturaleza y las papilas gustativas!</p>
+                    <p>Según el tamaño del grupo, los destinos y el tiempo asignado para el viaje, podemos personalizar el costo para usted, envíenos un correo electrónico a <span>naturaleza@bosky.com</span> y nos pondremos en contacto con usted lo antes posible.</p>
+                </div>
+            </article>
+        </section>
+            <img class="icon__separator" src="icons/naturaleza.svg" alt="Icon Separator">
+        <section>
+            <h3><a href="https://es.wikiloc.com/rutas-senderismo/chulilla-puentes-colgantes-embalse-de-loriguilla-pinturas-rupestres-charco-azul-05-06-16-13578222" target="_blank">Ruta de los Puentes Colgantes</a></h3>
+            <h3><a href="https://es.wikiloc.com/rutas-senderismo/pirineos-cauterets-puente-de-espana-lago-gaube-1071325" target="_blank">Ruta de Queso en Pirineos</a></h3>
+            <h3><a href="https://es.wikiloc.com/rutas-a-pie/requena-recorrido-por-el-barrio-de-la-villa-y-alrededores-las-bodegas-de-la-plaza-de-la-villa-y-mus-67536279" target="_blank">Ruta de Vino en la Utiel-Requena</a></h3>
+            <h3><a href="https://es.wikiloc.com/rutas-senderismo/monasterio-de-la-murta-ruta-botanica-acueducto-y-fuente-alcira-valencia-55587437" target="_blank">Ruta de Monasterio de la Murta</a></h3>
+            <h3><a href="https://es.wikiloc.com/rutas-senderismo/ain-castell-dain-pic-de-la-batalla-1550025" target="_blank">Ruta del Castel de Ain</a></h3>
+        </section>
+    </main>
+    <!-- main finishes here-->
+    <!-- footer begins here -->
+    <footer>
+        <img class="footer__image img" src="img/naturaleza_footer.webp" alt="Naturaleza">
+        <div class="container">
+            <div class="landing__logo">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </div>
+            <div class="legal">
+                <p>
+                    <a class="legal-color" href="index.html">&#169;	bosky | </a>
+                    <a class="legal-color" href="aviso-legal.html">aviso legal | </a>
+                    <a class="legal-color" href="politica.html">política de privacidad</a>
+                </p>
+            </div>
+            <div class="footer__column-about">
+                <h2 class="footer__headline">Nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="equipo.html" target="_blank">Trabaja con nosotros</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="contacta.html" target="_blank">Suscripción a newsletter</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="https://www.instagram.com/liviutaf/" target="_blank">Redes sociales</a>
+                    </p>
+                <div>
+                    <ul class="footer__icons">
+                        <li><img class="footer__social-icon" src="icons/instagram.svg" alt="Instagram page"></li>
+                        <li><img class="footer__social-icon" src="icons/fb.svg" alt="FB page"></li>
+                        <li><img class="footer__social-icon" src="icons/youtube.svg" alt="Youtube page"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__column-disfrutar">
+                <h2 class="footer__headline">Zona de disfrutar</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="escalada.html" target="_blank">Escalada</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="aventura.html" target="_blank">Aventura</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="naturaleza.html" target="_blank">Naturaleza</a>
+                    </p>
+            </div>
+            <div class="footer__column-blog">
+                <h2 class="footer__headline">Ven con nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="blog.html" target="_blank">Blog</a>
+                    </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer finishes here-->
+    </body>
+</html>
+

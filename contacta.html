@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <title>Bosky</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png">
+        <meta name="theme-color" content="#3c790a">
+        <meta name="theme-color"
+              content="#ecd96f"
+              media="(prefers-color-scheme: light)">
+        <meta name="theme-color"
+              content="#0b3e05"
+              media="(prefers-color-scheme: dark)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="author" content="Livi Florea">
+        <meta name="generator" content="Clojure">
+        <meta name="keywords" content="html, css, javascript">
+        <meta name="description" content="Bosky website">
+        <meta property="og:image" content="img/screenshot.png">
+        <meta property="og:title" content="The Rock">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cuenta">
+        <meta name="twitter:creator" content="@cuenta">
+        <meta property="og:image:secure_url" content="https://...">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="300">
+        <meta property="og:image:alt" content="">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="equipo.html" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="aventura.html" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="naturaleza.html" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="blog.html" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacta.html" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <!-- main starts here -->
+        <!-- slider main container -->
+        <section class="swiper">
+            <!-- additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hands.webp" alt="Hands">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/naturaleza.webp" alt="Outdoor">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/outdoor.webp" alt="Outdoor">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/shoes.webp" alt="Shoes">
+                </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <div class="container">
+            <h2>Formulario</h2>
+                <p>Bienvenido al buzón de sugerencias de <span>bosky.com</span>. Siguiendo la idea de mejora continua e innovación, invitamos a todos nuestros usuarios a que expongan sus sugerencias o propuestas. Por favor, rellena los siguientes campos y pulsa el botón de “Enviar”.</p>
+            <h1>¡Gracias por tu apoyo!</h1>
+        <!-- the form starts here -->
+            <section class="contacto">
+                <div class="container">
+                    <form
+                            action="https://formspree.io/f/xdovnovj"
+                            method="POST"
+                    >
+                        <label class="contacto__label">
+                            <span class="contacto__texto">Tu nombre (requerido):</span>
+                            <input class="contacto__input" type="text" required>
+                        </label>
+                        <label class="contacto__label">
+                            <span class="contacto__texto">Tu correo electrónico (requerido)</span>
+                            <input class="contacto__input" type="email" name="email" required>
+                        </label>
+                        <label class="contacto__label">
+                           <span class="contacto__texto">Tu mensaje, incluye también el asunto (info clases, rutas, experiencias, sugerencias)</span>
+                            <textarea class="contacto__input" name="message"></textarea>
+                        </label>
+                        <p class="contacto__check" >
+                            <label>
+                                <input type="checkbox" name="check">
+                                <span>Marca las casillas</span> (Acepto la política de privacidad)
+                            </label>
+                        </p>
+                            <button class="button contacto__enviar" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    <!-- the form ends here -->
+    </main>
+    <!-- main ends here -->
+    <!-- footer starts here -->
+    <footer class="container">
+        <p class="footer__legal">
+            <a class="footer__legal-color" href="index.html">&#169;	bosky | </a>
+            <a class="footer__legal-color" href="aviso-legal.html"> aviso legal | </a>
+            <a class="footer__legal-color" href="politica.html">política de privacidad</a>
+        </p>
+    </footer>
+    <!-- footer ends here -->
+    </body>
+</html>

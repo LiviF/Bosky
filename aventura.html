@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <title>Bosky</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png">
+        <meta name="theme-color" content="#3c790a">
+        <meta name="theme-color"
+              content="#ecd96f"
+              media="(prefers-color-scheme: light)">
+        <meta name="theme-color"
+              content="#0b3e05"
+              media="(prefers-color-scheme: dark)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="author" content="Livi Florea">
+        <meta name="generator" content="Clojure">
+        <meta name="keywords" content="html, css, javascript">
+        <meta name="description" content="Bosky website">
+        <meta property="og:image" content="img/screenshot.png">
+        <meta property="og:title" content="Bosky">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cuenta">
+        <meta name="twitter:creator" content="@cuenta">
+        <meta property="og:image:secure_url" content="https://...">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="300">
+        <meta property="og:image:alt" content="">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="equipo.html" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="aventura.html" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="naturaleza.html" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="blog.html" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacta.html" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <!-- Slider main container -->
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/aventura-top.webp" alt="Boulder">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/tent.webp" alt="Tent">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hooks.webp" alt="Hooks">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <!-- the main begins -->
+        <div class="container">
+            <h1 class="landing__headline">Bosky Aventura</h1>
+        </div>
+        <section>
+            <p>El montañismo como deporte puede convertirse en un factor clave para las personas que quieren tomarse un descanso del día a día del entorno laboral, para las personas con ansiedad, puede convertirse en parte de una terapia más amplia, y además para estar en una buena condición física.</p>
+            <p>Ya son muchos años los que nosotros trabajamos alrededor del alpinismo, realizando viajes, expediciones, nos gusta crear experiencias inolvidables para niños, adultos, trabajar junto a la comunidad, con escuelas o empresas, enseñar técnicas de supervivencia en la naturaleza, como hacer fuego o leer huellas.</p>
+        </section>
+            <img class="icon__separator" src="icons/aventura-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>Aventura para colegios</h2>
+            <article class="container__split">
+                <img class="page__image-aventura" src="img/aventura-colegios.webp" alt="Colegios Bosky">
+                <div class="container__split-aventura">
+                    <p>Desde la guardería hasta la escuela secundaria, tenemos estudiantes que una vez que salen de su zona de confort de casa, y participan en experiencias al aire libre, se transforman verdaderamente: se vuelven más alertas y prestan más atención al entorno, están más abiertos a socializar y construir nuevos relaciones, aprecian más la naturaleza, exploran los hábitats locales. Les gusta aprender sobre cómo cambia la naturaleza a lo largo de las estaciones, sobre habilidades al aire libre y técnicas de supervivencia a través de juegos de formación de equipos.</p>
+                </div>
+            </article>
+        </section>
+            <img class="icon__separator" src="icons/aventura-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>Aventura para familias </h2>
+            <article class="container__split">
+                <img class="page__image-aventura" src="img/aventura-familias.webp" alt="Aventura Bosky">
+                <div class="container__split-aventura">
+                    <p>A veces, las familias no tienen tiempo ni energía para programar con anticipación o para crear una lista de cosas que hacer en un fin de semana y por eso nos llaman. Hemos establecido un programa para familias con niños pequeños en el que las lecciones son puramente una invitación a jugar al aire libre, y usamos barro, palos, hojas como nuestras herramientas para enseñar y despertar su curiosidad por la naturaleza y estimular sus sistemas sensoriales.</p>
+                    <p>Y los adultos redescubren a su niño interior y profundizan en su conexión con sus hijos cuando juegan en el río con sus hijos, arman tiendas de campaña o recolectan guijarros para escribir sus nombres.</p>
+                </div>
+            </article>
+        </section>
+            <img class="icon__separator" src="icons/aventura-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>Team building</h2>
+            <article class="container__split">
+                <img class="page__image-aventura" src="img/aventura-teambuilding.webp" alt="Aventura Bosky">
+              <div class="container__split-aventura">
+                    <p>Nuestro equipo puede crear programas personalizados desde un día completo de trabajo en equipo hasta retiros de una semana, según los requisitos del cliente. A veces, la presión del trabajo diario rompe la moral y el progreso del equipo, influye en su productividad y establece un tono negativo en todo el entorno de trabajo.</p>
+                    <p>Nuestros ejercicios los llevan al exterior, en la naturaleza, brindándoles una experiencia única en la vida. En este entorno, aprenden nuevas habilidades para la vida, como escalar, construir un refugio temporal o simplemente viajar con mochila por las montañas, y al final del retiro, recuperan la confianza, se vuelven mejores para resolver problemas y se puede restaurar el vínculo del trabajo en equipo.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- main finishes here-->
+    <!-- footer begins here -->
+    <footer>
+        <img class="footer__image img" src="img/aventura_footer.webp" alt="Home">
+        <div class="container">
+            <div class="landing__logo">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </div>
+            <div class="legal">
+                <p>
+                    <a class="legal-color" href="index.html">&#169;	bosky | </a>
+                    <a class="legal-color" href="aviso-legal.html">aviso legal | </a>
+                    <a class="legal-color" href="politica.html">política de privacidad</a>
+                </p>
+            </div>
+            <div class="footer__column-about">
+                <h2 class="footer__headline">Nosotros</h2>
+                <p>
+                    <a class="footer__sub-headline" href="equipo.html" target="_blank">Trabaja con nosotros</a>
+                </p>
+                <p>
+                    <a class="footer__sub-headline" href="contacta.html" target="_blank">Suscripción a newsletter</a>
+                </p>
+                <p>
+                    <a class="footer__sub-headline" href="https://www.instagram.com/liviutaf/" target="_blank">Redes sociales</a>
+                </p>
+                <div>
+                    <ul class="footer__icons">
+                        <li><img class="footer__social-icon" src="icons/instagram.svg" alt="Instagram page"></li>
+                        <li><img class="footer__social-icon" src="icons/fb.svg" alt="FB page"></li>
+                        <li><img class="footer__social-icon" src="icons/youtube.svg" alt="Youtube page"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__column-disfrutar">
+                <h2 class="footer__headline">Zona de disfrutar</h2>
+                <p>
+                    <a class="footer__sub-headline" href="escalada.html" target="_blank">Escalada</a>
+                </p>
+                <p>
+                    <a class="footer__sub-headline" href="aventura.html" target="_blank">Aventura</a>
+                </p>
+                <p>
+                    <a class="footer__sub-headline" href="naturaleza.html" target="_blank">Naturaleza</a>
+                </p>
+            </div>
+            <div class="footer__column-blog">
+                <h2 class="footer__headline">Ven con nosotros</h2>
+                <p>
+                    <a class="footer__sub-headline" href="blog.html" target="_blank">Blog</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer finishes here-->
+    </body>
+</html>
+

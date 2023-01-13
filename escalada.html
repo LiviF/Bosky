@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <title>Bosky</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png">
+        <meta name="theme-color" content="#3c790a">
+        <meta name="theme-color"
+              content="#ecd96f"
+              media="(prefers-color-scheme: light)">
+        <meta name="theme-color"
+              content="#0b3e05"
+              media="(prefers-color-scheme: dark)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="author" content="Livi Florea">
+        <meta name="generator" content="Clojure">
+        <meta name="keywords" content="html, css, javascript">
+        <meta name="description" content="Bosky website">
+        <meta property="og:image" content="img/screenshot.png">
+        <meta property="og:title" content="The Rock">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cuenta">
+        <meta name="twitter:creator" content="@cuenta">
+        <meta property="og:image:secure_url" content="https://...">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="300">
+        <meta property="og:image:alt" content="">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner&family=Manrope&display=swap" rel="stylesheet">
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__nombre-contenedor">
+                        <p class="nav__nombre">Bosky</p>
+                    </div>
+                    <div class="nav__puesto-contenedor">
+                        <p class="nav__puesto">Escalada  / Naturaleza / Aventura</p>
+                    </div>
+                    <div class="nav__localizacion-contenedor">
+                        <p class="nav__localizacion">Valencia</p>
+                    </div>
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="equipo.html" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="aventura.html" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="naturaleza.html" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="blog.html" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacta.html" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <main>
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/boulder.webp" alt="Boulder">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/escalada-exterior.webp" alt="Escalada exterior">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hooks.webp" alt="Outdoor">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <div class="container">
+            <h1 class="landing__titulo">Que es la escalada?</h1>
+        </div>
+        <section>
+            <h3>Niveles de dificultad</h3>
+                <p>I II III IV V V+ 6a 6b 6b+ 6c 6c+ 7a 7b 7b+ 7c 7c+ 8a 8a+ 8b 8b+ 8c 8c+ 9a 9a+</p>
+                <p>La escalada es una práctica deportiva que, en su modalidad clásica, consiste en subir o recorrer paredes de roca, laderas escarpadas u otros relieves naturales caracterizados por su verticalidad y se realiza únicamente utilizando el relieve natural de la roca para progresar. La dificultad de una vía se marca por la combinación de varios factores: la inclinación de la pared, el tamaño y forma de los agarres, la distancia entre ellos, los puntos de reposo y el número total de movimientos. Se pueden establecer diferentes modalidades de escalada:</p>
+                <p><span>Escalada a vista.</span>La ascensión se realiza sin que el escalador tenga ningún tipo de información previa sobre la vía, por tanto, se realiza sin una preparación concreta.</p>
+                <p><span>Al flash.</span> El escalador ha obtenido información previa, pero ha de superarla en el primer intento.</p>
+                <p><span>Escalada trabajada.</span> Es la modalidad más habitual, el escalador practica y prueba una vía hasta que consigue encadenarla al Rot Puntk.</p>
+                <p><span>Bloque. </span>Escalada deportiva que se realiza en bloques de piedra (o rocódromos) de poca altura, de manera que una caída no representa peligro para el escalador.</p>
+                <p><span>Deportiva.</span> Se realiza en un circuito de competiciones, normalmente elaborados de resina artificial, con agarres también artificiales y el objetivo es subir lo más alto posible en un tiempo límite.</p>
+            </section>
+                <img class="icon__separator" src="icons/escalada-orange.svg" alt="Icon Separator">
+            <section>
+                <h2>escalada de exterior - zonas</h2>
+                <article>
+                    <a class="escalada__map-link" href="https://www.google.com/maps/d/viewer?mid=1x8i-gNYx8GUb_c9fwihbcqPM2qE&ll=39.500637333855586%2C-0.6645575000000279&z=8" target="_blank">
+                    <img class="escalada__map-img" src="img/map.webp" alt="Valencia map">
+                    </a>
+                </article>
+            </section>
+                <img class="icon__separator" src="icons/escalada-orange.svg" alt="Icon Separator">
+                <h2>Zonas de escalada en Comunidad Valenciana, España</h2>
+            <section class="escalada__exterior">
+                <h3>Sectores de escalada deportiva</h3>
+                    <article class="escalada__exterior-deportiva">
+                        <ul class="escalada__ul">
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.alzira.es/">Alzira</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.andilla.es/">Andilla</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.bunyol.es/">Buñol</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.thecrag.com/es/escalar/spain/valencia/area/3927226812">Calicanto</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.turismochelva.es/">Chelva</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.cheste.es/landing">Cheste</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.chiva.es/">Chiva</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.chulilla.es/landing">Chulilla</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.gandia.es/">Gandía</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.gestalgar.es/">Gestalgar</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.ontinyent.es/es">Ontinyent</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.requena.es/">Requena</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.utiel.es/es">Utiel</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.vilamarxant.es/landing">Vilamarxant</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.villardelarzobispo.es/es">Villar del Arzobispo</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.xativa.es/">Xàtiva</a></li>
+                        </ul>
+                    </article>
+                <h3>Sectores de escalada de bloque</h3>
+                <article class="escalada__exterior-bloque">
+                        <ul class="escalada__ul">
+                            <li><a class="escalada__ul-location" target="_blank" href="https://almenara.es/">Almenara</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.almisera.es/landing">Almiserà</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.thecrag.com/es/escalar/spain/valencia/area/3927226812">Calicanto</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.jarafuel.es/landing">Jarafuel</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://llauri.org/">Llaurí</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.lliria.es/es">Llíria</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://mapcarta.com/es/17372906">Montesa</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://montserrat.es/">Montserrat</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://parquesnaturales.gva.es/es/web/pn-serra-calderona">Serra Calderona</a></li>
+                            <li><a class="escalada__ul-location" target="_blank" href="https://www.xativa.es/">Xàtiva</a></li>
+                        </ul>
+                    </article>
+            <h3>Sectores de escalada clásica y artificial</h3>
+                <article class="escalada__exterior-clasica">
+                    <ul class="escalada__ul">
+                        <li><a class="escalada__ul-location" target="_blank" href="https://www.barx.es/">Barx</a></li>
+                        <li><a class="escalada__ul-location" target="_blank" href="https://www.chulilla.es/landing">Chulilla</a></li>
+                        <li><a class="escalada__ul-location" target="_blank" href="https://www.turismocastillalamancha.es/naturaleza/reserva-natural-de-las-hoces-del-cabriel-53475/descripcion/">Hoces del Cabriel</a></li>
+                        <li><a class="escalada__ul-location" target="_blank" href="https://www.simat.org/">Simat de la Valldigna</a></li>
+                    </ul>
+                </article>
+            <h3>Sectores de escalada psicobloc</h3>
+                <article class="escalada__exterior-psicobloc">
+                    <ul class="escalada__ul">
+                        <li><a class="escalada__ul-location" target="_blank" href="https://visit-cullera.es/">Cullera</a></li>
+                        <li><a class="escalada__ul-location" target="_blank" href="https://ca.wikipedia.org/wiki/Cova_del_pirata_Dragut">Cova del Dragut</a></li>
+                    </ul>
+                </article>
+        </section>
+            <img class="icon__separator" src="icons/escalada-orange.svg" alt="Icon Separator">
+        <section>
+            <h2>escalada de interior - escuelas colaboradores</h2>
+                <p>Somos muy afortunados de trabajar junto a los profesionales de dos de los rocodromos más importantes de Valencia, donde nuestros profesores están haciendo maravillas con las personas apasionadas por aprender a iniciarse correctamente en la escalada.</p>
+        </section>
+        <section>
+            <article class="container__split">
+                <img class="page__image-escalada" src="img/escalada_bunker.webp" alt="Bunker">
+                <div class="container__split-escalada">
+                    <h3>Bunker - Valencia</h3>
+                        <p>El <a href="https://bunkervalencia.wixsite.com/rocodromo" target="_blank">Bunker</a> es un rocódromo de Valencia que ofrece cursos de escalada para adultos y cursos de escalada infantil. Tienen parking para bicicletas, vestuarios con taquillas y campus board para entrenamiento de escalada. Nuestro <span>Noel</span>, técnico deportivo montaña y escalada, trabaja aqui como monitor experimentado para la docencia y seguimiento de grupos de entrenamiento.
+                        <p><span>Ubicación: </span><p><iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.152781341338!2d-0.3543216682384727!3d39.46587705523804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60489339f773fb%3A0x6e97dad341ce886c!2sEL%20BUNKER!5e0!3m2!1sen!2ses!4v1672392597261!5m2!1sen!2ses" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Calle Duque de Gaeta, 10 Valencia, 46022</iframe></p>
+                        <p><span>Horario de septiembre a junio:</span></p>
+                        <p>Lunes - Viernes: 10.00-14.00h y 17.00-22.00h</p>
+                        <p>Sabados: 10.00-14.00h</p>
+                    <h3>Tarifas:</h3>
+                        <p>Entradas de día:<span> 8€</span></p>
+                        <p>Bono 4 sesiones:<span> 25€ </span> (caduca en 1 mes)</p>
+                        <p>Bono 8 sesiones:<span> 35€ </span> (caduca en 1 mes)</p>
+                        <p>Bono mensual de mañanas:<span> 20€</span></p>
+                        <p>Bono mensual de mañanas + 1 clase semanal:<span> 40€</span></p>
+                        <p>Bono mensual de mañanas y tardes:<span> 40€</span></p>
+                        <p>Bono mensual de mañanas y tardes + 1 clase mensual: <span> 55€</span></p>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article class="container__split">
+                <img class="page__image-escalada" src="img/escalada_natural.webp" alt="Natural Climb">
+                <div class="container__split-escalada">
+                    <h3>Natural Climb - Valencia</h3>
+                        <p><a href="https://naturalclimb.es/" target="_blank">Natural Climb</a> disponen de un rocódromo interior y exterior, a estandardes europeos para iniciar en el mundo de la escalada y mejorar todo lo aprendido. Nuestra <span>Maria</span>, técnico deportivo montaña y escalada, trabaja aqui como monitora experimentada para la docencia y seguimiento de grupos de entrenamiento.
+                        <p><span>Ubicación: </span><p><iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.5936756587603!2d-0.39767899999999995!3d39.455914899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd9d814f1de620cd3!2sNatural%20Climb%20VLC!5e0!3m2!1sen!2ses!4v1672392033633!5m2!1sen!2ses" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">Carrer dels Campaners, 6, Valencia 46014</iframe></p>
+                        <p><span>Horario</span></p>
+                        <p>Lunes - Domingo: 08.00-22.00h</p>
+                        <p>Abierto todos los días de la semana, incluidos los festivos</p>
+                    <h3>Tarifas:</h3>
+                        <p>Socio Mensual:<span> 52,80 € </span>(Acceso al roco 1 mes)</p>
+                        <p>Socio Trimestral:<span> 132€ </span>(Acceso al roco 3 meses)</p>
+                        <p>Socio Anual:<span> 462€ </span>(Acceso al roco 12 meses)</p>
+                        <p>Tarifa Adultos (16-65 Años)<span> 9,90 € </span></p>
+                        <p>Tarifa Niños:<span> 7,15€ </span></p>
+                        <p>Tarifa 10 Entradas:<span> 79.2€ </span>(Sin Caducidad)</p>
+                        <p>Entrenamiento Personal:<span> 120€ </span>(Precio Mensual)</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- main finishes here-->
+    <!-- footer begins here -->
+    <footer>
+        <img class="footer__image img" src="img/escalda-footer.webp" alt="Escalada">
+        <div class="container">
+            <div class="landing__logo">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </div>
+            <div class="legal">
+                <p>
+                    <a class="legal-color" href="index.html">&#169;	bosky | </a>
+                    <a class="legal-color" href="aviso-legal.html">aviso legal | </a>
+                    <a class="legal-color" href="politica.html">política de privacidad</a>
+                </p>
+            </div>
+            <div class="footer__column-about">
+                <h2 class="footer__headline">Nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="equipo.html" target="_blank">Trabaja con nosotros</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="contacta.html" target="_blank">Suscripción a newsletter</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="https://www.instagram.com/liviutaf/" target="_blank">Redes sociales</a>
+                    </p>
+                <div>
+                    <ul class="footer__icons">
+                        <li><img class="footer__social-icon" src="icons/instagram.svg" alt="Instagram page"></li>
+                        <li><img class="footer__social-icon" src="icons/fb.svg" alt="FB page"></li>
+                        <li><img class="footer__social-icon" src="icons/youtube.svg" alt="Youtube page"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__column-disfrutar">
+                <h2 class="footer__headline">Zona de disfrutar</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="escalada.html" target="_blank">Escalada</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="aventura.html" target="_blank">Aventura</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="naturaleza.html" target="_blank">Naturaleza</a>
+                    </p>
+            </div>
+            <div class="footer__column-blog">
+                <h2 class="footer__headline">Ven con nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="blog.html" target="_blank">Blog</a>
+                    </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer finishes here-->
+    </body>
+</html>

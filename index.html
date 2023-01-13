@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <title>Bosky</title>
+        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/apple-touch-icon/touch-icon-ipad.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon/touch-icon-iphone-retina.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/img/apple-touch-icon/touch-icon-ipad-retina.png">
+        <meta name="theme-color" content="#3c790a">
+        <meta name="theme-color"
+              content="#ecd96f"
+              media="(prefers-color-scheme: light)">
+        <meta name="theme-color"
+              content="#0b3e05"
+              media="(prefers-color-scheme: dark)">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <meta name="author" content="Livi Florea">
+        <meta name="generator" content="Clojure">
+        <meta name="keywords" content="html, css, javascript">
+        <meta name="description" content="Bosky website">
+        <meta property="og:image" content="img/screenshot.png">
+        <meta property="og:title" content="Bosky">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@cuenta">
+        <meta name="twitter:creator" content="@cuenta">
+        <meta property="og:image:secure_url" content="https://...">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="400">
+        <meta property="og:image:height" content="300">
+        <meta property="og:image:alt" content="">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!--CSS - to correctly link the pages of CSS - we added the folder link -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- Javascript-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+    <!-- Header begins here-->
+        <header
+                class="header"
+                x-data=" { open: false, isTopScroll: true}"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Open menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Close menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="equipo.html" class="nav__link">Equipo</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="escalada.html" class="nav__link">Escalada</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="aventura.html" class="nav__link">Aventura</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="naturaleza.html" class="nav__link">Naturaleza</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="blog.html" class="nav__link">Blog</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="contacta.html" class="nav__link">Contacta</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    <!-- Header finishes here-->
+    <!-- Main begins here-->
+    <main>
+        <!-- Slider main container -->
+        <section class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/home-top.webp" alt="Home">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/hands.webp" alt="Hands">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/escalada-exterior.webp" alt="Escalada exterior">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/escalada-interior.webp" alt="Escalada interior">
+                </div>
+                <div class="swiper-slide">
+                    <img class="swiper-img" src="img/carousel/outdoor.webp" alt="Outdoor">
+                </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </section>
+        <!-- the main begins -->
+        <div class="container">
+            <h2>Que tipos de actividades te proponemos?</h2>
+            <div class="landing__logo">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </div>
+        </div>
+        <div class="landing__subcategory">
+                <div>
+                    <img src="img/escalda-footer.webp" alt="Escalada Bosky" class="landing__subcategory-img">
+                    <h3><a href="escalada.html" class="nav__link" target="_blank">Escalada</a></h3>
+                </div>
+                <div>
+                    <img src="img/aventura_footer.webp" alt="Aventura Bosky" class="landing__subcategory-img">
+                    <h3><a href="aventura.html" class="nav__link" target="_blank">Aventura</a></h3>
+                </div>
+                <div>
+                    <img src="img/naturaleza_footer.webp" alt="Naturaleza Bosky" class="landing__subcategory-img">
+                    <h3><a href="naturaleza.html" class="nav__link" target="_blank">Naturaleza</a></h3>
+                </div>
+        </div>
+            <img class="icon__separator" src="icons/icon-pin.svg" alt="Icon Separator">
+        <section>
+            <h2>La historia</h2>
+            <article class="container__split">
+                <img class="page__image" src="img/home-la-historia.webp" alt="History of climbing">
+                <div class="container__split-home">
+                    <p>La primera ascensión al Mont Blanc en <span>1786</span> a menudo se considera el comienzo del montañismo moderno. En la década de <span>1950</span>, la escalada en roca pasó de ser un pasatiempo recreativo a un deporte completo. En <span>1985</span>, se organizó el primer evento internacional oficial de escalada, llamado SportRoccia y en <span>1991</span>, se organizó el primer Campeonato Mundial en Frankfurt, Alemania.</p>
+                    <p>La escalada se puede clasificar en cuatro áreas principales: <span>escalada en roca, búlder, escalada en hielo, y alpinismo.</span></p>
+                    <p>La <span>escalada</span> en roca se puede realizar tanto en lugares interiores como exteriores. El deporte utiliza dos participantes y requiere que una persona suba atada a una cuerda, mientras que el compañero controla la cuerda.</p>
+                    <p>El <span>búlder</span> es el desafío de escalar y escalar rocas pequeñas, cantos rodados o paredes interiores. La altura media de un desafío de boulder es de seis metros y se realiza sin el uso de cuerdas o arneses.</p>
+                    <p>La <span>escalada en hielo</span>, como sugiere el nombre, requiere que los escaladores aborden una combinación de nieve, hielo o ambos juntos. Esta forma de escalada es muy peligrosa y los participantes usarán cuerdas y equipo de seguridad como la escalada en roca.</p>
+                    <p>El <span>alpinismo</span> se lleva a cabo en áreas montañosas y requiere las habilidades de caminar, escalar, escalar rocas y hielo.  También puede ser un desafío divertido subir una pendiente rocosa empinada.</p>
+                </div>
+            </article>
+        </section>
+            <img class="icon__separator" src="icons/icon-pin.svg" alt="Icon Separator">
+        <section>
+            <h2>Sobre nosotros</h2>
+            <article class="container__split">
+                <img class="page__image" src="img/home-sobre_nosotros.webp" alt="About Bosky">
+                <div class="container__split-home">
+                        <p>Ofrecemos lecciones de <span>escalada en roca</span> desde nivel principiante hasta experto, tanto en interiores como al aire libre, y creamos <span>aventuras temáticas </span>y <span>experiencias al aire libre</span>, continuamos trabajando junto con nuestras comunidades locales como centros juveniles, grupos de exploradores, escuelas y empresas para infundir un sentido de la naturaleza y exploración.</p>
+                        <p>Nuestro trabajo está orientado siempre hacia tu seguridad, y está orientado a ayudarte a estar atento en todas las situaciones de ocio o difíciles. Por razones de seguridad, no puedes comenzar a escalar a menos que hayas recibido un entrenamiento especial dedicado por nosotros, como entrenadores cualificados. Posteriormente, ponemos a prueba tu buen conocimiento de las técnicas correctas de escalada y el uso de equipos de escalada especializados necesarios para todas las disciplinas verticales.</p>
+                    <h3>Así es como comienza tu aventura de escalada, por una cuerda cada vez, ¡así que por favor
+                        <a href="contacta.html" class="nav__link" target="_blank">contacta
+                        </a> con nosotros!
+                    </h3>
+                </div>
+            </article>
+        </section>
+            <img class="icon__separator" src="icons/icon-pin.svg" alt="Icon Separator">
+        <section>
+            <h2>Nuestra marca</h2>
+            <article class="container__split">
+                <img class="page__image" src="img/home-cuatro-pilares.webp" alt="Bosky Pillars">
+                <div class="container__split-home">
+            <h3>Misión</h3>
+                <p>Queríamos crear un entorno sin prejuicios en el que cada persona se sintiera capaz de alcanzar sus objetivos establecidos para su viaje de escalada.</p>
+            <h3>Visión</h3>
+                <p>Prometemos crear un entorno de aprendizaje con un gran respeto por la naturaleza, protegiéndola y practicando nuestra pasión por la escalada de forma consciente y sostenible.</p>
+            <h3>Valores</h3>
+                <p><span>Seguridad y Precisión</span>: tu seguridad es y siempre será primordial para nosotros y consideramos que es la base sobre la que construye la pasión por la escalada.</p>
+                <p><span>Asombro y Valentía</span>: antes de comenzar a explorar nuestra maravillosa naturaleza, ten en cuenta sus curvas de aprendizaje para lograr su objetivo, tómese el tiempo para descubrir y desarrollar sus fortalezas y tenga en cuenta que podemos marcar la diferencia trabajando juntos.</p>
+                <p><span>Conciencia Ecológica y Sostenibilidad</span>: queremos inspirar a las personas a amar la naturaleza y ayudar a mantenerla lo más intacta posible, protegerla y, al mismo tiempo, crear un sentido de tratamiento responsable y sostenible de la naturaleza y sus recursos.</p>
+                <p><span>Comunidad</span>: dentro de nuestra comunidad de Bosky, siempre nos apoyamos, alentamos, nos divertimos y nos ayudamos unos a otros, ya que compartimos nuestra pasión por las montañas.</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- main finishes here-->
+    <!-- footer begins here -->
+    <footer>
+        <img class="footer__image img" src="img/home-footer.webp" alt="Home">
+        <div class="container">
+            <div class="landing__logo">
+                <img src="img/logo.png" alt="Logo Bosky" class="header__image">
+            </div>
+            <div class="legal">
+                <p>
+                    <a class="legal-color" href="index.html">&#169;	bosky | </a>
+                    <a class="legal-color" href="aviso-legal.html">aviso legal | </a>
+                    <a class="legal-color" href="politica.html">política de privacidad</a>
+                </p>
+            </div>
+            <div class="footer__column-about">
+                <h2 class="footer__headline">Nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="equipo.html" target="_blank">Trabaja con nosotros</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="contacta.html" target="_blank">Formulario de contacto</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="https://www.instagram.com/liviutaf/" target="_blank">Redes sociales</a>
+                    </p>
+                <div>
+                    <ul class="footer__icons">
+                        <li>
+                            <img class="footer__social-icon" src="icons/instagram.svg" alt="Instagram page">
+                        </li>
+                        <li>
+                            <img class="footer__social-icon" src="icons/fb.svg" alt="FB page">
+                        </li>
+                        <li>
+                            <img class="footer__social-icon" src="icons/youtube.svg" alt="Youtube page">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__column-disfrutar">
+                <h2 class="footer__headline">Zona de disfrutar</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="escalada.html" target="_blank">Escalada</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="aventura.html" target="_blank">Aventura</a>
+                    </p>
+                    <p>
+                        <a class="footer__sub-headline" href="naturaleza.html" target="_blank">Naturaleza</a>
+                    </p>
+            </div>
+            <div class="footer__column-blog">
+                <h2 class="footer__headline">Ven con nosotros</h2>
+                    <p>
+                        <a class="footer__sub-headline" href="blog.html" target="_blank">Blog</a>
+                    </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer finishes here-->
+    </body>
+</html>
+
